@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
 
   def loadCourse
     @courses = Course.all
+    @grades = Grade.all
+    @places = Place.all
   end
 end

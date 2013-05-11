@@ -1,7 +1,7 @@
 <div class="row">
 
       <div class="span12">
-        <table class="table  table-bordered">
+        <table class="table table-bordered">
 
           <tbody>
 
@@ -15,6 +15,25 @@
 	    <% end%>
 
 
+
+
+            <% @grades.each_slice(6) do |slice| %>
+
+                <tr class="success">
+                <% slice.each do |grade|%>
+                  <td><%= grade.name %></td>
+                <% end %>
+
+            <% end%>
+
+            <% @places.each_slice(6) do |slice| %>
+
+                <tr class="success">
+                <% slice.each do |place|%>
+                  <td><%= place.name %></td>
+                <% end %>
+
+            <% end%>
           </tbody>
         </table>
       </div>
