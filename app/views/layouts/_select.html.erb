@@ -1,67 +1,19 @@
 <div class="row">
 
       <div class="span12">
-        <table class="table table-bordered">
+        <table class="table  table-bordered">
 
           <tbody>
-            <tr  class="success">
-              <td rowspan="4" style="text-align: center;vertical-align: middle;">科目</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
 
-              <td rowspan="4" style="text-align: center;vertical-align: middle;">年级</td>
-              <td>Mark</td>
+	    <% @courses.each_slice(6) do |slice| %>
+		
+		<tr class="success">
+		<% slice.each do |course|%>
+		  <td><%= course.name %></td>
+		<% end %>
 
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td rowspan="4" style="text-align: center;vertical-align: middle;">版本</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+	    <% end%>
 
-
-            </tr>
-            <tr  class="success">
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              
-            </tr>
-            <tr   class="success">
-
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-
-              <td>@mdo</td>
-              <td>@mdo</td>
-
-            </tr>
-            <tr class="success">
-
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-
-            </tr>
 
           </tbody>
         </table>
