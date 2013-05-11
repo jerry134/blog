@@ -1,8 +1,9 @@
 Blog::Application.routes.draw do
+  get "index/home"
+
   resources :courses
 
 
-  resources :articles
 
 
   # The priority is based upon order of creation:
