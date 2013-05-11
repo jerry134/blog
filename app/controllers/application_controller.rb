@@ -7,5 +7,7 @@ class ApplicationController < ActionController::Base
     @courses = Course.all
     @grades = Grade.all
     @places = Place.all
+    @chapters = Chapter.all
+    @sections = Section.all
   end
 end

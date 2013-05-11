@@ -11,3 +11,11 @@ Grade.create!([{ name: '必修1'}, { name: '必修2'}, { name: '必修3'}, { nam
 Place.delete_all
 
 Place.create!([{ name: '人教版'}, { name: '北师大版'}, { name: '苏教版'}, { name: '沪教版'}])
+
+Chapter.delete_all
+
+Chapter.create!([{ name: '第一章 集合与函数概念'}])
+
+Section.delete_all
+
+Section.create!([{ name: '集合'}, { name: '集合的含义'}, { name: '集合的基本运算'}, ])

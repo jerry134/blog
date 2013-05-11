@@ -7,11 +7,11 @@
 
 	    <% @courses.each_slice(6) do |slice| %>
 		
-		<tr class="success">
+		<tr>
 		<% slice.each do |course|%>
 		  <td><%= course.name %></td>
 		<% end %>
-
+		</tr>
 	    <% end%>
 
 
@@ -19,20 +19,20 @@
 
             <% @grades.each_slice(6) do |slice| %>
 
-                <tr class="success">
+                <tr>
                 <% slice.each do |grade|%>
                   <td><%= grade.name %></td>
                 <% end %>
-
+		</tr>
             <% end%>
 
             <% @places.each_slice(6) do |slice| %>
 
-                <tr class="success">
+                <tr>
                 <% slice.each do |place|%>
                   <td><%= place.name %></td>
                 <% end %>
-
+		</tr>
             <% end%>
           </tbody>
         </table>
