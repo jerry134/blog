@@ -1,4 +1,7 @@
 Blog::Application.routes.draw do
+  resources :places
+
+
   resources :grades
 
 
