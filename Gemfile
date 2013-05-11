@@ -12,7 +12,8 @@ gem 'simple_form'
 
 
 # Bootstrap
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
