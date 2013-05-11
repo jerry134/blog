@@ -9,6 +9,11 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem 'simple_form'
 
+
+
+# Bootstrap
+gem 'twitter-bootstrap-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,7 +27,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 
-  gem 'twitter-bootstrap-rails'
+#  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
