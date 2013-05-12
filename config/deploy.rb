@@ -32,14 +32,14 @@ namespace :deploy do
   #end
 
    task :start do 
-     run "unicorn_rails -c config/unicorn.rb -E production -D"
+     run "#{release_path}/unicorn_rails -c #{release_path}/config/unicorn.rb -E production -D"
    end
    task :stop do
      run "ps aux | grep unicorn | grep -v grep | awk '{print $2}' | xargs kill -s 9"
    end
    task :restart do
      run "ps aux | grep unicorn | grep -v grep | awk '{print $2}' | xargs kill -s 9"
-     run "unicorn_rails -c config/unicorn.rb -E production -D"
+     run "#{release_path}/unicorn_rails -c #{release_path}/config/unicorn.rb -E production -D"
    end
 
   #task :setup_config, roles: :app do
