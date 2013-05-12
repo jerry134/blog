@@ -31,6 +31,17 @@ namespace :deploy do
     #end
   #end
 
+   task :start do 
+     run "unicorn_rails -c config/unicorn.rb -E production -D"
+   end
+   task :stop do
+     run "ps aux | grep unicorn | grep -v grep | awk '{print $2}' | xargs kill -s 9"
+   end
+   task :restart do
+     run "ps aux | grep unicorn | grep -v grep | awk '{print $2}' | xargs kill -s 9"
+     run "unicorn_rails -c config/unicorn.rb -E production -D"
+   end
+
   #task :setup_config, roles: :app do
     #sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     #sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
