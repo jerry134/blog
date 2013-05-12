@@ -1,17 +1,17 @@
 require "bundler/capistrano"
 
-server "42.121.122.34", :web, :app, :db, primary: true
+server "198.199.86.209", :web, :app, :db, primary: true
 
 set :application, "blog"
-set :user, "root"
+set :user, "ruby"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy#remote_cache
 set :use_sudo, false
 
-set :scm, "git"
+#set :scm, "git"
 #set :repository, "git@github.com:jerry134/#{application}.git"
-set :repository, "https://github.com/jerry134/#{application}.git"
-set :branch, "master"
+set :repository, '.'#"https://github.com/jerry134/#{application}.git"
+#set :branch, "master"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
