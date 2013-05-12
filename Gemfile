@@ -46,8 +46,11 @@ gem 'formtastic-bootstrap'
 gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'rvm-capistrano'
-gem 'capistrano-rbenv'
+group :development do
+  gem 'rvm-capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-unicorn', require: false
+end
 
 # To use debugger
 # gem 'debugger'
