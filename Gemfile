@@ -1,5 +1,5 @@
-#source 'https://rubygems.org'
-source 'http://ruby.taobao.org'
+source 'https://rubygems.org'
+#source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
 
@@ -46,7 +46,11 @@ gem 'formtastic-bootstrap'
 gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+group :development do
+  gem 'rvm-capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-unicorn', require: false
+end
 
 # To use debugger
 # gem 'debugger'
