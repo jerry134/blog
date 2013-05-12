@@ -9,7 +9,7 @@ app_path = "/home/ruby/apps/blog/current"
 worker_processes 1
 preload_app true
 timeout 180
-listen "127.0.0.1:9000"
+listen 9000 #"127.0.0.1:9000"
 
 # Spawn unicorn master worker for user apps (group: apps)
 user 'ruby', 'ruby' 
