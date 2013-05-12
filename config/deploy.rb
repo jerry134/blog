@@ -9,6 +9,7 @@ set :user, "ruby"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :copy#remote_cache
 set :use_sudo, false
+set :unicorn_binary, 'unicorn_rails'
 
 #set :scm, "git"
 #set :repository, "git@github.com:jerry134/#{application}.git"
